@@ -1,0 +1,22 @@
+.main-weather-info {
+  display: flex;
+  flex-direction: column;
+
+  .main-weather-info__refresh {
+    align-self: flex-end;
+    transition: all 0.3s ease;
+
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 15px;
+    margin: 15px 0;
+
+    color: #fff;
+    border-bottom: 1px solid white;
+
+    border-radius: 15px;
+    &:hover {
+      border-color: aqua;
+    }
+  }
+}

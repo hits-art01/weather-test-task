@@ -1,0 +1,38 @@
+.header {
+  margin: 30px 0;
+
+  .header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .header__store-title {
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      text-decoration: none;
+
+      @media (max-width: 480px) {
+        font-size: 30px;
+      }
+    }
+
+    & .header__add-btn {
+      transition: all 0.3s ease;
+
+      font-size: 20px;
+      font-weight: 500;
+      padding: 10px 20px;
+      margin: 5px;
+
+      color: #fff;
+      border: 1px solid white;
+      background: rgb(25, 26, 28);
+      border-radius: 10px;
+      &:hover {
+        color: rgb(25, 26, 28);
+        background: #fff;
+      }
+    }
+  }
+}

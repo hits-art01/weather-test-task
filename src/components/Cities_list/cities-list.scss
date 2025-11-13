@@ -1,0 +1,8 @@
+.cities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  @media (max-width: 900px) {
+    justify-content: space-between;
+  }
+}
