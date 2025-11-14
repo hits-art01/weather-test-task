@@ -33,6 +33,12 @@ export default function ClientProviderWrapper({
       }
     }
   }, [cities, dispatch]);
+
+  useEffect(() => {
+    if (currentCity) {
+      localStorage.setItem("currentCity", JSON.stringify(currentCity));
+    }
+  }, [currentCity]);
   return (
     <QueryClientProvider client={queryClient}>
       {children}
