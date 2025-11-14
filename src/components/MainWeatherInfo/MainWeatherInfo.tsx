@@ -66,6 +66,7 @@ const MainWeatherInfo: FC = () => {
   useEffect(() => {
     if (city) {
       localStorage.setItem("currentCity", JSON.stringify(city));
+      console.log(city);
     }
   }, [city]);
 

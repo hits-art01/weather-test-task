@@ -17,7 +17,7 @@ const AddForm: FC = () => {
   };
 
   const handleClick = () => {
-    dispatch(addCity(inputState));
+    if (inputState) dispatch(addCity(inputState));
     setInputState("");
     if (pathname !== "/") {
       router.push("/");

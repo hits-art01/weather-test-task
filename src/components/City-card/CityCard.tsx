@@ -6,7 +6,7 @@ import { City, removeCity } from "../../store/citiesSlice";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { setCity } from "@/store/currentCitySlice";
+import { clearCity, setCity } from "@/store/currentCitySlice";
 
 export interface WeatherData {
   main: { temp: number };
@@ -35,6 +35,9 @@ const CityCard: FC<CityCardProps> = ({
   const handleRemove = (e: React.MouseEvent) => {
     e.stopPropagation();
     dispatch(removeCity(city.name));
+
+    dispatch(clearCity());
+    localStorage.removeItem("currentCity");
   };
   const handleRefresh = (e: React.MouseEvent) => {
     e.stopPropagation();
